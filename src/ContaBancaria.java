@@ -11,10 +11,12 @@ public class ContaBancaria {
     return saldo;
   }
 
-  public void sacar(double valor){
+  public boolean sacar(double valor){
     if(valor<=this.limite){
       this.saldo-=valor;
+      return true;
     }
+    return false;
   }
 
   public void depositar(double valor){
